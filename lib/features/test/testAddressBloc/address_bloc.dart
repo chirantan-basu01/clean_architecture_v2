@@ -1,11 +1,11 @@
 import 'package:educare_erp/core/network/apiHelper/status.dart';
 import 'package:educare_erp/features/test/models/address_model.dart';
-import 'package:educare_erp/features/test/testAddressBlock/address_event.dart';
-import 'package:educare_erp/features/test/testAddressBlock/address_state.dart';
 import 'package:educare_erp/features/test/testRepository/test_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/network/apiHelper/resource.dart';
+import 'address_event.dart';
+import 'address_state.dart';
 
 class AddressBloc extends Bloc<AddressEvent, AddressState> {
   final TestUseCases _testUseCases;

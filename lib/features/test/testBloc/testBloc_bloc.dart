@@ -1,8 +1,8 @@
 import 'package:educare_erp/core/network/apiHelper/resource.dart';
 import 'package:educare_erp/core/network/apiHelper/status.dart';
 import 'package:educare_erp/features/test/models/post_model.dart';
-import 'package:educare_erp/features/test/testBlock/testBloc_event.dart';
-import 'package:educare_erp/features/test/testBlock/testBloc_state.dart';
+import 'package:educare_erp/features/test/testBloc/testBloc_event.dart';
+import 'package:educare_erp/features/test/testBloc/testBloc_state.dart';
 import 'package:educare_erp/features/test/testRepository/test_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,11 +1,11 @@
 import 'package:educare_erp/core/network/apiHelper/locator.dart';
 import 'package:educare_erp/core/services/routeGenerator/route_generator.dart';
-import 'package:educare_erp/features/test/screens/test_screen.dart';
-import 'package:educare_erp/features/test/testAddressBlock/address_block.dart';
-import 'package:educare_erp/features/test/testBlock/testBloc_bloc.dart';
 import 'package:educare_erp/features/test/testRepository/test_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'features/test/testAddressBloc/address_bloc.dart';
+import 'features/test/testBloc/testBloc_bloc.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,9 +21,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<TestBloc>(create: (context)=>TestBloc(getIt<TestUseCases>())),
-        BlocProvider<AddressBloc>(create: (context)=>AddressBloc(getIt<TestUseCases>())),
-
+        BlocProvider<TestBloc>(
+            create: (context) => TestBloc(getIt<TestUseCases>())),
+        BlocProvider<AddressBloc>(
+            create: (context) => AddressBloc(getIt<TestUseCases>())),
       ],
       child: MaterialApp(
         title: 'Educare ERP',
@@ -40,5 +41,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
